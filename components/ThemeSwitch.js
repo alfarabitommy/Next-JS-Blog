@@ -1,4 +1,5 @@
 import { useState } from "react";
+import DarkTheme from "./DarkTheme";
 
 // ini adalah contoh penggunaan button untuk merubah tema website kita
 // misalnya dari light mode menjadi dark mode maupun sebaliknya
@@ -19,7 +20,9 @@ function ThemeSwitch() {
                 color: inherit;
                 cursor: pointer;
              }    
-             `}</style>
+            `}</style>
+            {/* ini adalah if, jika dark mode false maka layar akan menjadi putih, jika dark mode true maka layar akan menjadi hitam */}
+            { darkMode && <DarkTheme /> }
         </>
     );
 }
